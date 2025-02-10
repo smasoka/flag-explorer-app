@@ -9,3 +9,5 @@ class Country(BaseModel):
 class CountryDetails(BaseModel):
     name: str
     population: int
+    capital: str
+    flag: str
