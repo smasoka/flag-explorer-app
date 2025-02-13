@@ -49,7 +49,7 @@ export async function getServerSideProps(context) {
         console.error("Error fetching country data:", error);
         return {
             props: {
-                errorMassage: `Country ${name} is not found!`
+                errorMassage: `Country ${name} is not found! Please check spelling and try again`
             }
         }
     }
