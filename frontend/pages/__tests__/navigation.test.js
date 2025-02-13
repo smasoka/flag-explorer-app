@@ -19,7 +19,6 @@ test('navigates to the country details page when a flag is clicked', () => {
 
     // Simulate clicking on a flag - get AltText for src
     const flag = screen.getByAltText('Namibia');
-    // fireEvent.click(screen.getByAltText('Namibia'));
     fireEvent.click(flag);
 
     expect(mockPush).toHaveBeenCalledWith('/countries/Namibia');
