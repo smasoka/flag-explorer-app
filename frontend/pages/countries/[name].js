@@ -19,9 +19,9 @@ export default function CountryDetails({ country }) {
 }
 
 export async function getServerSideProps(context) {
-    const { country } = context.params;
+    const { name } = context.params;
 
-    const response = await axios.get(`http://127.0.0.1:8000/countries/${country}`);
+    const response = await axios.get(`http://127.0.0.1:8000/countries/${name}`);
     console.log(response.data);
 
     return {
