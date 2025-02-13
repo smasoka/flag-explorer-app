@@ -7,7 +7,7 @@ export default function Home({ countries }) {
             <h1>Flag Explorer</h1>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))", gap: "10px" }}>
                 {countries.map((country) => (
-                    <div style={{ textAlign: "center" }}>
+                    <div key={country.name} style={{ textAlign: "center" }}>
                         <Link href={`/countries/${country.name}`}>
                             <img src={country.flag} alt={country.name} width="100" style={{ cursor: "pointer"}} />
                         </Link>
